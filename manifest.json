@@ -1,16 +1,13 @@
 {
     "manifest_version": 3,
-    "name": "Soop VOD Helper",
-    "description": "편하게 써야지",
+    "name": "찬밥그릇",
+    "description": "Soop VOD 편하게 보기",
     "version": "1.0",
-    "permissions": [
-      "activeTab",
-      "storage",
-      "scripting",
-      "tabs"
-    ],
     "background": {
       "service_worker": "background.js"
+    },
+    "icons": {
+      "128": "icon.png"
     },
     "action": {
       "default_popup": "popups/popup.html",
