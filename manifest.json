@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Soop VOD Helper",
+    "description": "편하게 써야지",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting",
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popups/popup.html",
+      "default_icon": "icon.png"
+    },
+    "host_permissions": [
+      "https://vod.sooplive.co.kr/player/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://vod.sooplive.co.kr/player/*"],
+        "js": [
+          "scripts/observer.js", 
+          "scripts/gtl/index.js", 
+          "scripts/gtl/comment.js", 
+          "scripts/gtl/scroll.js",
+          "scripts/player/index.js"
+        ],
+        "run_at": "document_idle",
+        "css": [
+          "styles/gtlStyle.css",
+          "styles/playerStyle.css"
+        ]
+      }
+    ]
+}
