@@ -83,10 +83,12 @@ const getTimelineComment = () => {
 
   // 3. 답글 펼치기
   const replyButton = baseComment.querySelector('button.btn-basic')
-  replyButton.click()
-
-  // 답글 닫기 버튼 비활성화
-  replyButton.disabled = true
+  if (!replyButton.classList.contains('on')) {
+    replyButton.click()
+  
+    // 답글 닫기 버튼 비활성화
+    replyButton.disabled = true
+  }
 
   setTimeout(() => {
     const replyComments = getReplyComment(baseComment)

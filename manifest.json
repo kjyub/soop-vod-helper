@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "찬밥그릇",
     "description": "Soop VOD 편하게 보기",
-    "version": "1.0",
+    "version": "1.01",
     "background": {
       "service_worker": "background.js"
     },
